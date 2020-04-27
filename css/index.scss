@@ -1,0 +1,435 @@
+$dark-gray: #363636;
+$light-gray: #555555;
+body{
+	font-family: 'Noto Serif JP', cursive, serif;
+	letter-spacing: 0.15vw;
+    animation: fadeIn 1.5s ease 0s 1 normal;
+    -webkit-animation: fadeIn 1.5s ease-in 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@keyframes scaleUp {
+    0% {transform: scale(1)}
+    100% {transform: scale(1.05)}
+}
+@-webkit-keyframes scaleUp {
+    0% {transform: scale(1)}
+    100% {transform: scale(1.05)}
+}
+
+.pc {
+	display: block;
+	@media screen and (max-width: 796px){
+		display: none;
+	}
+}
+.sp {
+	display: none;
+	@media screen and (max-width: 796px){
+		display: block;
+	}
+}
+
+.wrapper {
+	width: 100vw;
+	min-height: 100vh;
+	@media screen and (max-width: 796px){
+		min-height: calc(100vh - 10vh);
+	}
+	position: relative;
+
+	.loading {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background: #FFF;
+		z-index: 1;
+		i {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%) translateX(-50%);
+		}
+	}
+
+	.background_image {
+		img.pc {
+			width: 100vw;
+			height: 100vh;
+			object-fit: cover;
+			// animation: scaleUp 10s linear infinite alternate;
+			// -webkit-animation: scaleUp 10s linear infinite alternate;
+			@media screen and (max-width: 796px){
+				display: none;
+			}
+		}
+		img.sp {
+			display: none;
+			@media screen and (max-width: 796px){
+				display: block;
+				position: absolute;
+				top:0;
+				width: 100vw;
+				height: 100%;
+				object-fit: cover;
+				// animation: scaleUp 10s linear infinite alternate;
+				// -webkit-animation: scaleUp 10s linear infinite alternate;
+			}
+		}
+	}
+}
+
+header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: #FFF;
+	ul {
+		padding: 2vw 8vw;
+		@media screen and (max-width: 796px){
+			padding: 4vw 8vw 2vw 8vw;
+		}
+		color: $dark-gray;
+	}
+	li {
+		display: inline-block;
+		vertical-align: top;
+		&.logo_area{
+			margin-right: 3vw;
+			.logo{
+				font-size: 1.5vw;
+				white-space: nowrap;
+				@media screen and (max-width: 796px){
+					font-size: 4vw;
+				}
+				margin-bottom: 7px;
+			}
+			.sub{
+				font-size: 1.2vw;
+				@media screen and (max-width: 796px){ 
+					display: none; 
+				}
+			}
+		}
+		&.message_area{
+			p {
+				font-size: 1.2vw;
+				margin-bottom: 10px;
+				@media screen and (max-width: 796px){ 
+					font-size: 2.5vw;
+				}
+				&:first-child{
+					@media screen and (max-width: 796px){ 
+						margin-bottom: 0px;
+					}
+				}
+				&:last-child{
+					margin-bottom: 0px;
+					@media screen and (max-width: 796px){ 
+						display: none; 
+					}
+				}
+			}
+		}
+		&.twitter_area{
+			float: right;
+			img{
+				height: 3.15vw;
+				@media screen and (max-width: 796px){ 
+					position: absolute;
+					top: 3.5vw;
+					right: 3vw;
+					height: 8vw;
+				}
+			}
+		}
+	}
+}
+
+section.message_container{
+	.message_area {
+		position: absolute;
+		font-family: "hannari", 'Noto Serif JP', cursive, serif;
+		bottom: 10vh;
+		left: 8vw;
+		@media screen and (max-width: 796px){
+			top: 15vh;
+			left: 8vw;
+		}
+		ul li {
+			list-style: none;
+			display: table;
+			background-color: #FFF;
+			padding: 1.5vw;
+			margin-bottom: 0.9vw;
+			@media screen and (max-width: 796px){
+				padding: 3.0vw 0 3.0vw 3.0vw;
+				margin-bottom: 1.9vw;
+			}
+			&:last-child{
+				margin-bottom: 0vw;
+			}
+			p {
+				color: $light-gray;
+				font-size: 2.0vw;
+				@media screen and (max-width: 796px){
+					font-size: 4.5vw;
+				}
+			}
+		}
+	}
+}
+
+section.action_container{
+	.action_area{
+		position: absolute;
+		bottom: 10vh;
+		right: 8vw;
+		@media screen and (max-width: 796px){
+			bottom: 8vh;
+			left: 50vw;
+			transform: translateX(-50%);
+		}
+		ul li{
+			list-style: none;
+			margin-bottom: 1.5vw;
+			@media screen and (max-width: 796px){
+				margin-bottom: 4.5vw;
+			}
+			&:last-child{
+				margin-bottom: 0vw;
+			}
+			button {
+				font-family: 'Noto Serif JP', cursive, serif;
+				font-size: 1.2vw;
+				padding: 0.8vw 3.2vw;
+				color: $dark-gray;
+				background-color: #FFF;
+				border: #000 solid 1px;
+				transition: 0.3s;
+				@media screen and (max-width: 796px){
+					width: 100%;
+					padding: 2.3vw 3.0vw;
+					font-size: 2.4vw;
+				}
+				&#button_meeter{
+					color: #FFF;
+					background-color: #222;
+					border: #FFF solid 1px;
+				}
+				p {
+				}
+				p.heading {
+					font-size: 1.7vw;
+					@media screen and (max-width: 796px){
+						font-size: 4.2vw;
+					}
+				}
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}
+
+
+section.video_container {
+	position: relative;
+
+	#video_area{
+		#their-video {
+			width: 100vw;
+			height: 100vh;
+			@media screen and (max-width: 796px){
+				height: 100%;
+			}
+			background-color: #eee;
+		}
+		#my-video {
+			position: absolute;
+			top: 1vw;
+			left: 1vw;
+		    width: 25vw;
+		    height: auto;
+		    background-color: #ddd;
+		    border-radius: 20px;
+		}
+	}
+	#end-call {
+		.close-button {
+			position: absolute;
+			display: none;
+			bottom: 5vh;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 60px;
+			width: 60px;
+			border-radius: 120px;
+			background-color: #F00;
+			color: #FFF;
+			border: none;
+			background-image: url("./../img/close.svg");
+			background-size: 70%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}
+
+section.popup_container {
+	background: rgba(0,0,0, 0.2);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	.popup_area {
+		display:inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		background-color: #FFF;
+		text-align: center;
+		color: $dark-gray;
+		padding: 4vw 5vw;
+		@media screen and (max-width: 796px){
+			width: 80%;
+			padding: 10vw 3vw;
+		}
+		.popup {
+			&.waiter{
+				// display: none;
+			}
+			&.meeter{
+				// display: none;
+			}
+			.text{
+				font-size: 1.6vw;
+				line-height: 3.2vw;
+				@media screen and (max-width: 796px){
+					font-size: 4.5vw;
+					line-height: 9.0vw;
+				}
+				#my-id {
+					color: $dark-gray;
+					font-weight: 400;
+					font-size: 3.5vw;
+					letter-spacing: 0.3vw;
+					@media screen and (max-width: 796px){
+						font-size: 7.0vw;
+						letter-spacing: 0.6vw;
+					}
+				}
+				.message{
+					// font-size: 1.0vw;
+					// line-height: 2.0vw;
+				}
+				.caution {
+					color: #D33;
+				}
+				input{
+					height: 3.5vw;
+					width: 100%;
+					background-color: #EEE;
+					padding: 1vw 0;
+					font-size: 3.5vw;
+					@media screen and (max-width: 796px){
+						height: 7.0vw;
+						padding: 2vw 0;
+						font-size: 7.0vw;
+					}
+					letter-spacing: 1.0vw;
+					color: $dark-gray;
+					border: 0.5px #CCC solid;
+					border-radius: 10px;
+					text-align: center;
+					margin: 2.0vw 0;
+					&::placeholder {
+						color: #DDD;
+					}
+				}
+				small{
+					font-size: 1.4vw;
+					@media screen and (max-width: 796px){
+						font-size: 3.0vw;
+					}
+				}
+				button{
+					margin-top: 4vw;
+					padding: 0.8vw 3.2vw;
+					color: $dark-gray;
+					background-color: #FFF;
+					border: #000 solid 1px;
+					font-size: 2.0vw;
+					transition: 0.3s;
+					@media screen and (max-width: 796px){
+						font-size: 6.0vw;
+					}
+					padding: 1vw 3vw;
+					&:hover {
+						color: #FFF;
+						background-color: #222;
+						border: #FFF solid 1px;
+					}
+				}
+				strong {
+					font-weight: normal;
+					font-size: 1.9vw;
+					@media screen and (max-width: 796px){
+						font-size: 4.0vw;
+					}
+					color: $dark-gray;
+				}
+				a {
+					font-size: 1.5vw;
+					@media screen and (max-width: 796px){
+						font-size: 4.0vw;
+					}
+				}
+			}
+		}	
+	}
+}
+
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	background: white;
+	text-align: center;
+	color: #888888;
+	padding: 0.5vw 0;
+	p {
+		font-size: 1.0vw;
+		margin: 0.5vw;
+		@media screen and (max-width: 796px){
+			font-size: 3.0vw;
+			margin: 1.5vw;
+		}
+		a {
+			text-decoration: none;
+			&:link, &:visited{
+				color: $dark-gray;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164610449-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164610449-1');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オンライン帰省.com</title>
+    <meta name="description" content="オンライン帰省.comは無料で利用できるビデオチャットサービスです。オンラインであなたの大切な人に、会いに行ってみませんか。">
+    <meta property="og:title"       content="オンライン帰省.com">
+    <meta property="og:description" content="オンライン帰省.comは無料で利用できるビデオチャットサービスです。オンラインであなたの大切な人に、会いに行ってみませんか。">
+    <meta property="og:url"         content="https://online-kisei.com/">
+    <meta property="og:type"        content="website" />
+    <meta name="twitter:card"       content="summary_large_image">
+    <meta name="twitter:site"       content="@nsk_dev" />
+    <meta name="twitter:creator"    content="@nsk_dev" />
+    <meta property="og:image"       content="https://online-kisei.com/img/ogp.png" />
+    <link rel=”icon” href=“./favicon.ico>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css?1263">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="loading" id="loading">
+            <i class="fa fa-circle-o-notch fa-spin fa-4x fa-fw" style="color: #DDDDDD"></i>
+        </div>
+        <div class="background_image">
+            <img src="./img/top_bg.png" class="pc">
+            <img src="./img/top_bg_sp.png" class="sp">
+        </div>
+        <header>
+            <ul>
+                <li class="logo_area">
+                    <div class="logo">
+                        オンライン帰省.com
+                    </div>
+                    <div class="sub">
+                        online-kisei.com
+                    </div>
+                </li>
+                <li class="message_area">
+                    <p>このサイトは、無料で利用できるビデオチャットサービスです。</p>
+                    <p>オンラインであなたの大切な人に、会いに行ってみませんか。</p>
+                </li>
+                <!-- <li class="twitter_area">
+                    <a href="https://twitter.com/nsk_dev" target="_blank">
+                        <img src="./img/tw_icon.svg">
+                    </a>
+                </li> -->
+            </ul>
+        </header>
+        <section class="message_container">
+            <div class="message_area">
+                <ul>
+                    <li>
+                        <p>大切な人だから。</p>
+                    </li>
+                    <li>
+                        <p>これから先もずっと会えるように。</p>
+                    </li>
+                    <li>
+                        <p>ＧＷの帰省はオンラインで。</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="action_container">
+            <div class="action_area">
+                <ul>
+                    <li>
+                        <button onclick="check(1)" id="button_waiter">
+                            <p class="heading" >帰りを待つ方</p>
+                            <p>はコチラ</p>
+                        </button>
+                    </li>
+                    <li>
+                        <button onclick="check(0)" id="button_meeter">
+                            <p class="heading" >会いに行く方</p>
+                            <p>はコチラ</p>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="popup_container" id="webview_popup" style="display: none;">
+            <div class="popup_area">
+                <div class="popup webview">
+                    <div class="text" style="font-family: 'M PLUS Rounded 1c';">
+                        <p>LINEやTwitterのブラウザからは<br>利用できません。<p>
+                        <p class="caution">※SafariやChromeで<br>開き直してください。※</p>
+                        <p><a href="https://online-kisei.com/" target="_blank">コチラから</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>created by N (<a href="https://twitter.com/nsk_dev" target="_blank">twitter</a>)</p>
+            <p>photo provided by Masahiro Terakawa (<a href="https://www.ms-pix.com/" target="_blank">website</a> / <a href="https://www.instagram.com/masahiro_terakawa_photography/" target="_blank">instagram</a>)</p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/media_allow.js?2399"></script>
+    <script type="text/javascript">
+        window.onload = function(){  
+            $(function() {
+                $("#loading").fadeOut();
+            });
+        }
+    </script>
+</body>
+
+</html>

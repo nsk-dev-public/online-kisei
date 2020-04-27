@@ -1,0 +1,346 @@
+body {
+  font-family: 'Noto Serif JP', cursive, serif;
+  letter-spacing: 0.15vw;
+  animation: fadeIn 1.5s ease 0s 1 normal;
+  -webkit-animation: fadeIn 1.5s ease-in 0s 1 normal; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes scaleUp {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.05); } }
+@-webkit-keyframes scaleUp {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.05); } }
+.pc {
+  display: block; }
+  @media screen and (max-width: 796px) {
+    .pc {
+      display: none; } }
+
+.sp {
+  display: none; }
+  @media screen and (max-width: 796px) {
+    .sp {
+      display: block; } }
+
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative; }
+  @media screen and (max-width: 796px) {
+    .wrapper {
+      min-height: calc(100vh - 10vh); } }
+  .wrapper .loading {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #FFF;
+    z-index: 1; }
+    .wrapper .loading i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%); }
+  .wrapper .background_image img.pc {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; }
+    @media screen and (max-width: 796px) {
+      .wrapper .background_image img.pc {
+        display: none; } }
+  .wrapper .background_image img.sp {
+    display: none; }
+    @media screen and (max-width: 796px) {
+      .wrapper .background_image img.sp {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        object-fit: cover; } }
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #FFF; }
+  header ul {
+    padding: 2vw 8vw;
+    color: #363636; }
+    @media screen and (max-width: 796px) {
+      header ul {
+        padding: 4vw 8vw 2vw 8vw; } }
+  header li {
+    display: inline-block;
+    vertical-align: top; }
+    header li.logo_area {
+      margin-right: 3vw; }
+      header li.logo_area .logo {
+        font-size: 1.5vw;
+        white-space: nowrap;
+        margin-bottom: 7px; }
+        @media screen and (max-width: 796px) {
+          header li.logo_area .logo {
+            font-size: 4vw; } }
+      header li.logo_area .sub {
+        font-size: 1.2vw; }
+        @media screen and (max-width: 796px) {
+          header li.logo_area .sub {
+            display: none; } }
+    header li.message_area p {
+      font-size: 1.2vw;
+      margin-bottom: 10px; }
+      @media screen and (max-width: 796px) {
+        header li.message_area p {
+          font-size: 2.5vw; } }
+      @media screen and (max-width: 796px) {
+        header li.message_area p:first-child {
+          margin-bottom: 0px; } }
+      header li.message_area p:last-child {
+        margin-bottom: 0px; }
+        @media screen and (max-width: 796px) {
+          header li.message_area p:last-child {
+            display: none; } }
+    header li.twitter_area {
+      float: right; }
+      header li.twitter_area img {
+        height: 3.15vw; }
+        @media screen and (max-width: 796px) {
+          header li.twitter_area img {
+            position: absolute;
+            top: 3.5vw;
+            right: 3vw;
+            height: 8vw; } }
+
+section.message_container .message_area {
+  position: absolute;
+  font-family: "hannari", 'Noto Serif JP', cursive, serif;
+  bottom: 10vh;
+  left: 8vw; }
+  @media screen and (max-width: 796px) {
+    section.message_container .message_area {
+      top: 15vh;
+      left: 8vw; } }
+  section.message_container .message_area ul li {
+    list-style: none;
+    display: table;
+    background-color: #FFF;
+    padding: 1.5vw;
+    margin-bottom: 0.9vw; }
+    @media screen and (max-width: 796px) {
+      section.message_container .message_area ul li {
+        padding: 3.0vw 0 3.0vw 3.0vw;
+        margin-bottom: 1.9vw; } }
+    section.message_container .message_area ul li:last-child {
+      margin-bottom: 0vw; }
+    section.message_container .message_area ul li p {
+      color: #555555;
+      font-size: 2.0vw; }
+      @media screen and (max-width: 796px) {
+        section.message_container .message_area ul li p {
+          font-size: 4.5vw; } }
+
+section.action_container .action_area {
+  position: absolute;
+  bottom: 10vh;
+  right: 8vw; }
+  @media screen and (max-width: 796px) {
+    section.action_container .action_area {
+      bottom: 8vh;
+      left: 50vw;
+      transform: translateX(-50%); } }
+  section.action_container .action_area ul li {
+    list-style: none;
+    margin-bottom: 1.5vw; }
+    @media screen and (max-width: 796px) {
+      section.action_container .action_area ul li {
+        margin-bottom: 4.5vw; } }
+    section.action_container .action_area ul li:last-child {
+      margin-bottom: 0vw; }
+    section.action_container .action_area ul li button {
+      font-family: 'Noto Serif JP', cursive, serif;
+      font-size: 1.2vw;
+      padding: 0.8vw 3.2vw;
+      color: #363636;
+      background-color: #FFF;
+      border: #000 solid 1px;
+      transition: 0.3s; }
+      @media screen and (max-width: 796px) {
+        section.action_container .action_area ul li button {
+          width: 100%;
+          padding: 2.3vw 3.0vw;
+          font-size: 2.4vw; } }
+      section.action_container .action_area ul li button#button_meeter {
+        color: #FFF;
+        background-color: #222;
+        border: #FFF solid 1px; }
+      section.action_container .action_area ul li button p.heading {
+        font-size: 1.7vw; }
+        @media screen and (max-width: 796px) {
+          section.action_container .action_area ul li button p.heading {
+            font-size: 4.2vw; } }
+      section.action_container .action_area ul li button:hover {
+        opacity: 0.7; }
+
+section.video_container {
+  position: relative; }
+  section.video_container #video_area #their-video {
+    width: 100vw;
+    height: 100vh;
+    background-color: #eee; }
+    @media screen and (max-width: 796px) {
+      section.video_container #video_area #their-video {
+        height: 100%; } }
+  section.video_container #video_area #my-video {
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    width: 25vw;
+    height: auto;
+    background-color: #ddd;
+    border-radius: 20px; }
+  section.video_container #end-call .close-button {
+    position: absolute;
+    display: none;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60px;
+    width: 60px;
+    border-radius: 120px;
+    background-color: #F00;
+    color: #FFF;
+    border: none;
+    background-image: url("./../img/close.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+section.popup_container {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  section.popup_container .popup_area {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #FFF;
+    text-align: center;
+    color: #363636;
+    padding: 4vw 5vw; }
+    @media screen and (max-width: 796px) {
+      section.popup_container .popup_area {
+        width: 80%;
+        padding: 10vw 3vw; } }
+    section.popup_container .popup_area .popup .text {
+      font-size: 1.6vw;
+      line-height: 3.2vw; }
+      @media screen and (max-width: 796px) {
+        section.popup_container .popup_area .popup .text {
+          font-size: 4.5vw;
+          line-height: 9.0vw; } }
+      section.popup_container .popup_area .popup .text #my-id {
+        color: #363636;
+        font-weight: 400;
+        font-size: 3.5vw;
+        letter-spacing: 0.3vw; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text #my-id {
+            font-size: 7.0vw;
+            letter-spacing: 0.6vw; } }
+      section.popup_container .popup_area .popup .text .caution {
+        color: #D33; }
+      section.popup_container .popup_area .popup .text input {
+        height: 3.5vw;
+        width: 100%;
+        background-color: #EEE;
+        padding: 1vw 0;
+        font-size: 3.5vw;
+        letter-spacing: 1.0vw;
+        color: #363636;
+        border: 0.5px #CCC solid;
+        border-radius: 10px;
+        text-align: center;
+        margin: 2.0vw 0; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text input {
+            height: 7.0vw;
+            padding: 2vw 0;
+            font-size: 7.0vw; } }
+        section.popup_container .popup_area .popup .text input::placeholder {
+          color: #DDD; }
+      section.popup_container .popup_area .popup .text small {
+        font-size: 1.4vw; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text small {
+            font-size: 3.0vw; } }
+      section.popup_container .popup_area .popup .text button {
+        margin-top: 4vw;
+        padding: 0.8vw 3.2vw;
+        color: #363636;
+        background-color: #FFF;
+        border: #000 solid 1px;
+        font-size: 2.0vw;
+        transition: 0.3s;
+        padding: 1vw 3vw; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text button {
+            font-size: 6.0vw; } }
+        section.popup_container .popup_area .popup .text button:hover {
+          color: #FFF;
+          background-color: #222;
+          border: #FFF solid 1px; }
+      section.popup_container .popup_area .popup .text strong {
+        font-weight: normal;
+        font-size: 1.9vw;
+        color: #363636; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text strong {
+            font-size: 4.0vw; } }
+      section.popup_container .popup_area .popup .text a {
+        font-size: 1.5vw; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text a {
+            font-size: 4.0vw; } }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  background: white;
+  text-align: center;
+  color: #888888;
+  padding: 0.5vw 0; }
+  footer p {
+    font-size: 1.0vw;
+    margin: 0.5vw; }
+    @media screen and (max-width: 796px) {
+      footer p {
+        font-size: 3.0vw;
+        margin: 1.5vw; } }
+    footer p a {
+      text-decoration: none; }
+      footer p a:link, footer p a:visited {
+        color: #363636; }
+
+/*# sourceMappingURL=index.css.map */

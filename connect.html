@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164610449-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164610449-1');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通話画面 | オンライン帰省.com</title>
+    <meta name="description" content="オンライン帰省.comは無料で利用できるビデオチャットサービスです。オンラインであなたの大切な人に、会いに行ってみませんか。">
+    <meta property="og:title"       content="オンライン帰省.com">
+    <meta property="og:description" content="オンライン帰省.comは無料で利用できるビデオチャットサービスです。オンラインであなたの大切な人に、会いに行ってみませんか。">
+    <meta property="og:url"         content="https://online-kisei.com/">
+    <meta property="og:type"        content="website" />
+    <meta name="twitter:card"       content="summary_large_image">
+    <meta name="twitter:site"       content="@nsk_dev" />
+    <meta name="twitter:creator"    content="@nsk_dev" />
+    <meta property="og:image"       content="https://online-kisei.com/img/ogp.png" />
+    <link rel=”icon” href=“./favicon.ico>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/connect.css">
+</head>
+<body>
+    <div class="wrapper">
+        <section class="video_container">
+            <div id="video_area">
+                <video id="their-video" autoplay playsinline></video>
+                <video id="my-video" muted="true" autoplay playsinline></video>
+            </div>            
+            <form id="end-call">
+                <button class="close-button" type="button"></button>
+            </form>
+        </section>
+
+        <section class="popup_container">
+            <div class="popup_area">
+                <div class="popup waiter" style="display: none;">
+                    <div class="text">
+                        <p>あなたの番号は<p>
+                        <span id="my-id">...</span>
+                        <p>です</p>
+                        <br>
+                        <p class="message">
+                            話したい相手に、<br class="sp">この番号を伝えてください。<br>
+                            相手にこの番号を入力してもらうと<br>
+                            自動でビデオ通話画面に切り替わります。
+                        </p>
+                        <br>
+                        <p class="caution">※待っている間にこの画面は<br class="sp">閉じないでください</p>
+                    </div>
+                </div>
+                <div class="popup meeter" style="display: none;">
+                    <div class="text">
+                        <p>
+                            相手から聞いた９桁の番号<br class="sp">を入力してください
+                        </p>
+                        <form id="make-call">
+                            <input type="number" placeholder="123456789" id="callto-id">
+                            <br>
+                            <small>※ハイフンは含めず、半角数字で入力してください</small>
+                            <br>
+                            <button href="#" type="submit">会いに行く</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <div>
+                <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+                <script type="text/javascript" src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+                <script type="text/javascript" src="js/script.js?2"></script>
+            </body>
+
+            </html>

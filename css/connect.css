@@ -1,0 +1,176 @@
+body {
+  font-family: 'Noto Serif JP', cursive, serif;
+  letter-spacing: 0.15vw;
+  animation: fadeIn 1.5s ease 0s 1 normal;
+  -webkit-animation: fadeIn 1.5s ease-in 0s 1 normal; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.pc {
+  display: block; }
+  @media screen and (max-width: 796px) {
+    .pc {
+      display: none; } }
+
+.sp {
+  display: none; }
+  @media screen and (max-width: 796px) {
+    .sp {
+      display: block; } }
+
+.wrapper {
+  width: 100vw;
+  min-height: 100vh; }
+  @media screen and (max-width: 796px) {
+    .wrapper {
+      min-height: calc(100vh - 10vh); } }
+
+section.video_container {
+  position: relative; }
+  section.video_container #video_area #their-video {
+    width: 100vw;
+    height: 100vh;
+    background-color: #eee; }
+    @media screen and (max-width: 796px) {
+      section.video_container #video_area #their-video {
+        height: calc(100vh - 10vh); } }
+  section.video_container #video_area #my-video {
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    width: 25vw;
+    height: auto;
+    background-color: #ddd;
+    border-radius: 20px; }
+  section.video_container #end-call .close-button {
+    position: absolute;
+    display: none;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60px;
+    width: 60px;
+    border-radius: 120px;
+    background-color: #F00;
+    color: #FFF;
+    border: none;
+    background-image: url("./../img/close.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+section.popup_container {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  section.popup_container .popup_area {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #FFF;
+    text-align: center;
+    color: #363636;
+    padding: 4vw 5vw; }
+    @media screen and (max-width: 796px) {
+      section.popup_container .popup_area {
+        width: 80%;
+        padding: 10vw 3vw; } }
+    section.popup_container .popup_area .popup .text {
+      font-size: 1.6vw;
+      line-height: 3.2vw; }
+      @media screen and (max-width: 796px) {
+        section.popup_container .popup_area .popup .text {
+          font-size: 4.5vw;
+          line-height: 9.0vw; } }
+      section.popup_container .popup_area .popup .text #my-id {
+        color: #363636;
+        font-weight: 400;
+        font-size: 3.5vw;
+        letter-spacing: 0.3vw; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text #my-id {
+            font-size: 9.0vw;
+            letter-spacing: 0.6vw; } }
+      @media screen and (max-width: 796px) {
+        section.popup_container .popup_area .popup .text .message {
+          font-size: 4.0vw;
+          line-height: 8.0vw; } }
+      section.popup_container .popup_area .popup .text .caution {
+        color: #E22; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text .caution {
+            font-size: 4.0vw;
+            line-height: 8.0vw; } }
+      section.popup_container .popup_area .popup .text input {
+        font-family: 'Noto Serif JP', cursive, serif;
+        height: 3.5vw;
+        width: 100%;
+        background-color: #F5F5F5;
+        padding: 1vw 0;
+        font-size: 3.5vw;
+        letter-spacing: 1.0vw;
+        color: #363636;
+        border: 0.5px #363636 solid;
+        border-radius: 10px;
+        text-align: center;
+        margin: 2.0vw 0; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text input {
+            height: 7.0vw;
+            padding: 2vw 0;
+            font-size: 7.0vw;
+            letter-spacing: 2.0vw; } }
+        section.popup_container .popup_area .popup .text input::placeholder {
+          color: #D8D8D8; }
+      section.popup_container .popup_area .popup .text small {
+        font-size: 1.4vw; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text small {
+            font-size: 3.0vw; } }
+      section.popup_container .popup_area .popup .text button {
+        font-family: 'Noto Serif JP', cursive, serif;
+        margin-top: 4vw;
+        padding: 0.8vw 3.2vw;
+        color: #363636;
+        background-color: #FFF;
+        border: #000 solid 1px;
+        font-size: 2.0vw;
+        transition: 0.3s;
+        padding: 1vw 3vw; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text button {
+            margin-top: 6vw;
+            padding: 4.0vw 10.0vw;
+            font-size: 4.0vw; } }
+        section.popup_container .popup_area .popup .text button:hover {
+          color: #FFF;
+          background-color: #222;
+          border: #FFF solid 1px; }
+      section.popup_container .popup_area .popup .text strong {
+        font-weight: normal;
+        font-size: 1.9vw;
+        color: #363636; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text strong {
+            font-size: 4.0vw; } }
+      section.popup_container .popup_area .popup .text a {
+        text-decoration: none;
+        font-size: 1.5vw; }
+        @media screen and (max-width: 796px) {
+          section.popup_container .popup_area .popup .text a {
+            font-size: 4.0vw; } }
+
+/*# sourceMappingURL=connect.css.map */

@@ -1,0 +1,213 @@
+$dark-gray: #363636;
+$light-gray: #555555;
+body{
+	font-family: 'Noto Serif JP', cursive, serif;
+	letter-spacing: 0.15vw;
+    animation: fadeIn 1.5s ease 0s 1 normal;
+    -webkit-animation: fadeIn 1.5s ease-in 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.pc {
+	display: block;
+	@media screen and (max-width: 796px){
+		display: none;
+	}
+}
+.sp {
+	display: none;
+	@media screen and (max-width: 796px){
+		display: block;
+	}
+}
+
+.wrapper {
+	width: 100vw;
+	min-height: 100vh;
+	@media screen and (max-width: 796px){
+		min-height: calc(100vh - 10vh);
+	}
+}
+
+section.video_container {
+	position: relative;
+
+	#video_area{
+		#their-video {
+			width: 100vw;
+			height: 100vh;
+			@media screen and (max-width: 796px){
+				height: calc(100vh - 10vh);
+			}
+			background-color: #eee;
+		}
+		#my-video {
+			position: absolute;
+			top: 1vw;
+			left: 1vw;
+		    width: 25vw;
+		    height: auto;
+		    background-color: #ddd;
+		    border-radius: 20px;
+		}
+	}
+	#end-call {
+		.close-button {
+			position: absolute;
+			display: none;
+			bottom: 5vh;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 60px;
+			width: 60px;
+			border-radius: 120px;
+			background-color: #F00;
+			color: #FFF;
+			border: none;
+			background-image: url("./../img/close.svg");
+			background-size: 70%;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+	}
+}
+
+section.popup_container {
+	background: rgba(0,0,0, 0.2);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	.popup_area {
+		display:inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		background-color: #FFF;
+		text-align: center;
+		color: $dark-gray;
+		padding: 4vw 5vw;
+		@media screen and (max-width: 796px){
+			width: 80%;
+			padding: 10vw 3vw;
+		}
+		.popup {
+			&.waiter{
+				// display: none;
+			}
+			&.meeter{
+				// display: none;
+			}
+			.text{
+				font-size: 1.6vw;
+				line-height: 3.2vw;
+				@media screen and (max-width: 796px){
+					font-size: 4.5vw;
+					line-height: 9.0vw;
+				}
+				#my-id {
+					color: $dark-gray;
+					font-weight: 400;
+					font-size: 3.5vw;
+					letter-spacing: 0.3vw;
+					@media screen and (max-width: 796px){
+						font-size: 9.0vw;
+						letter-spacing: 0.6vw;
+					}
+				}
+				.message{
+					@media screen and (max-width: 796px){
+						font-size: 4.0vw;
+						line-height: 8.0vw;
+					}
+				}
+				.caution {
+					color: #E22;
+					@media screen and (max-width: 796px){
+						font-size: 4.0vw;
+						line-height: 8.0vw;
+					}
+				}
+				input{
+					font-family: 'Noto Serif JP', cursive, serif;
+					height: 3.5vw;
+					width: 100%;
+					background-color: #F5F5F5;
+					padding: 1vw 0;
+					font-size: 3.5vw;
+					letter-spacing: 1.0vw;
+					@media screen and (max-width: 796px){
+						height: 7.0vw;
+						padding: 2vw 0;
+						font-size: 7.0vw;
+						letter-spacing: 2.0vw;
+					}
+					color: $dark-gray;
+					border: 0.5px $dark-gray solid;
+					border-radius: 10px;
+					text-align: center;
+					margin: 2.0vw 0;
+					&::placeholder {
+						color: #D8D8D8;
+					}
+				}
+				small{
+					font-size: 1.4vw;
+					@media screen and (max-width: 796px){
+						font-size: 3.0vw;
+					}
+				}
+				button{
+					font-family: 'Noto Serif JP', cursive, serif;
+					margin-top: 4vw;
+					padding: 0.8vw 3.2vw;
+					color: $dark-gray;
+					background-color: #FFF;
+					border: #000 solid 1px;
+					font-size: 2.0vw;
+					transition: 0.3s;
+					@media screen and (max-width: 796px){
+						margin-top: 6vw;
+						padding: 4.0vw 10.0vw;
+						font-size: 4.0vw;
+					}
+					padding: 1vw 3vw;
+					&:hover {
+						color: #FFF;
+						background-color: #222;
+						border: #FFF solid 1px;
+					}
+				}
+				strong {
+					font-weight: normal;
+					font-size: 1.9vw;
+					@media screen and (max-width: 796px){
+						font-size: 4.0vw;
+					}
+					color: $dark-gray;
+				}
+				a {
+					text-decoration: none;
+					font-size: 1.5vw;
+					@media screen and (max-width: 796px){
+						font-size: 4.0vw;
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+
+
