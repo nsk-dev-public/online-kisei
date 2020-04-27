@@ -40,7 +40,7 @@ if ($.cookie("ok_peerid") == null) {
 }
 
 peer = new Peer(String(peerId), {
-    key: 'cd9d7ccf-2735-411b-a0c9-6bc9c1dd560b',
+    key: '*keyを入れてください*',
     debug: 3
 });
 
